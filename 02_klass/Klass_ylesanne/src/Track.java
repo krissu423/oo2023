@@ -20,8 +20,9 @@ public class Track {
         return "Time deleted!";
     }
 
-    public String changeTime(String newTime){
-        this.trackTime = newTime();
+    public String changeTime(Integer newTime){
+        this.trackTime = newTime;
         System.out.println("Time changed!");
+        return "x";
     }
 }
