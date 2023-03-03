@@ -18,7 +18,7 @@ public class Main {
         long pikkNumber = 31312321312L;*/
         Scanner scanner = new Scanner(System.in);
 
-        World world = new World("10", "5");
+        World world = new World(10, 5);
 
         Player player = new Player(world.width, world.height);
         Dragon dragon = new Dragon(world.width, world.height);
@@ -31,7 +31,7 @@ public class Main {
         String input = scanner.nextLine();
         // for (; !input.equals("end"); )
         while (!input.equals("end")){
-            player.move(input);
+            player.move(input, world);
             world.printMap(world.width, world.height,
                     player.xCoordinaate, player.yCoordinaate, player.symbol,
                     dragon.xCoordinaate, dragon.yCoordinaate, dragon.symbol,
