@@ -1,15 +1,12 @@
 public class Main {
     public static void main(String[] args) {
-        User kristjan = new User("krissu", "krissu", "krissusp@tlu.ee", "Kristjan", "Peedisson");
+        Track kristjan = new Track(10, "kristjan", "kristjan");
+        Track kristjan2 = new Track(14, "kristjan2", "kristjan2");
 
-        User kristjan1 = new User("krissu", "krissu", "krissusp@tlu.ee", "Kristjan", "Peedisson");
-
-        User kristjan2 = new User("krissu", "krissu", "krissusp@tlu.ee", "Kristjan", "Peedisson");
-
-        String sonum = kristjan.deleteUser();
+        String sonum = kristjan.deleteTrack();
         System.out.println(sonum);
 
-        kristjan2.changePassword("krissu2");
+        kristjan2.changeTime(12);
 
     }
 
