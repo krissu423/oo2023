@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
@@ -9,27 +11,44 @@ public class Main {
         byte pisikenumber = 432;
         short lyhikenumber = 473;
         long pikkNumber = 31312321312L;*/
+        Scanner scanner = new Scanner(System.in);
+
+
 
         int worldWidth = 10;
         int worldHeight = 5;
 
-        int playerXCoordinaate = getRandomCoordinaate(worldWidth); //täisarvuline number
-        int playerYCoordinaate = getRandomCoordinaate(worldHeight); //castimine ehk teisendamine ühest tüübist teise
-        char playerSymbol = 'X';
-        int dragonXCoordinaate = getRandomCoordinaate(worldWidth);
-        int dragonYCoordinaate = getRandomCoordinaate(worldHeight);
-        char dragonSymbol = '0';
-        int orcXCoordinaate = getRandomCoordinaate(worldWidth);
-        int orcYCoordinaate = getRandomCoordinaate(worldHeight);
-        char orcSymbol = '0';
+        Player player = new Player(worldWidth, worldHeight);
+        Dragon dragon = new Dragon(worldWidth, worldHeight);
+        Orc orc = new Orc(worldWidth, worldHeight);
 
+        printMap(worldWidth, worldHeight,
+                player.xCoordinaate, player.yCoordinaate, player.symbol,
+                dragon.xCoordinaate, dragon.yCoordinaate, dragon.symbol,
+                orc.xCoordinaate, orc.yCoordinaate, orc.symbol);
+        String input = scanner.nextLine();
+        // for (; !input.equals("end"); )
+        while (!input.equals("end")){
+            player.move(input);
+            printMap(worldWidth, worldHeight,
+                    player.xCoordinaate, player.yCoordinaate, player.symbol,
+                    dragon.xCoordinaate, dragon.yCoordinaate, dragon.symbol,
+                    orc.xCoordinaate, orc.yCoordinaate, orc.symbol);
+            System.out.println();
+            input = scanner.nextLine();
+        }
+
+
+    }
+
+    private static void printMap(int worldWidth, int worldHeight, int playerXCoordinaate, int playerYCoordinaate, char playerSymbol, int dragonXCoordinaate, int dragonYCoordinaate, char dragonSymbol, int orcXCoordinaate, int orcYCoordinaate, char orcSymbol) {
         // algväärtus kuni iga tsükkel
         for (int y = 0; y < worldHeight; y++) {
             System.out.println();
             for (int x = 0; x < worldWidth; x++) {
-                if (y == 0 || y==worldHeight-1) {
+                if (y == 0 || y== worldHeight -1) {
                     System.out.print("-");
-                } else if (x== 0 || x== worldWidth-1) {
+                } else if (x== 0 || x== worldWidth -1) {
                     System.out.print("|");
                 } else {
        //               ctrl + alt + m
@@ -42,7 +61,7 @@ public class Main {
     }
 
     private static int getRandomCoordinaate(int worldDimension) {
-        return (int) (Math.random() * worldDimension - 2 + 1); 
+        return (int) (Math.random() * worldDimension - 2 + 1);
     }
 
 
