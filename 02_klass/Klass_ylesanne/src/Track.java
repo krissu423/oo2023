@@ -21,7 +21,7 @@ public class Track {
     }
 
     public String changeTime(String newTime){
-        this.trackTime = newTime;
+        this.trackTime = newTime();
         System.out.println("Time changed!");
     }
 }

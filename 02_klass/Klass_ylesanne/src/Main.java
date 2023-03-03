@@ -7,7 +7,6 @@ public class Main {
         System.out.println(sonum);
 
         kristjan2.changeTime(12);
-
     }
 
 
