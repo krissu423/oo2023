@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5223eeb8-9a16-4ebf-9d09-6aa725b939e3" name="Changes" comment="" />
+    <list default="true" id="5223eeb8-9a16-4ebf-9d09-6aa725b939e3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/11_proovikontrolltoo2/proovikt2/src/main/java/SpringController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/11_proovikontrolltoo2/proovikt2/src/main/java/Toode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ylesanne1Kodus/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ylesanne1Kodus/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -26,6 +31,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/krist/Documents/GitHub/oo2023",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -42,6 +48,7 @@
       <option name="presentableId" value="Default" />
       <updated>1676637096573</updated>
       <workItem from="1676637098165" duration="545000" />
+      <workItem from="1687902579964" duration="2000" />
     </task>
     <servers />
   </component>
